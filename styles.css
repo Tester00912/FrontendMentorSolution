@@ -1,0 +1,143 @@
+/* ----------------------------
+   RESET & BASELINE
+----------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%; /* 16px base for accessibility */
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  background-color: var(--clr-slate-300);
+  color: var(--clr-slate-900);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ----------------------------
+   CSS VARIABLES (DESIGN TOKENS)
+----------------------------- */
+:root {
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-slate-300: hsl(212, 45%, 89%);
+  --clr-slate-500: hsl(216, 15%, 48%);
+  --clr-slate-900: hsl(218, 44%, 22%);
+
+  --font-body: 15px;
+  --font-family: 'Outfit', sans-serif;
+  --fw-regular: 400;
+  --fw-bold: 700;
+
+  --max-width: 1440px;
+  --min-width: 320px;
+}
+
+/* ----------------------------
+   TYPOGRAPHY & STRUCTURE
+----------------------------- */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: var(--fw-bold);
+  color: var(--clr-slate-900);
+}
+
+p {
+  font-weight: var(--fw-regular);
+  color: var(--clr-slate-500);
+}
+
+/* Utility classes */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.box{
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 400px; /* Reduced width */
+  height: 600px; /* Reduced height */
+
+  background-color: var(--clr-white);
+  margin: 4rem auto; /* Top-bottom: 4rem, left-right: auto (centers it horizontally) */
+  border-radius: 1rem; /* More subtle and modern rounding */
+  padding: 1rem; /* Optional: internal spacing */
+}
+
+/*QR classes*/
+.qr {
+     margin: 10px;
+}
+
+img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover; /* crop if needed */
+}
+
+
+.text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;         /* Center-align text inside */
+  padding: 1rem;              /* Optional: add inner spacing */
+  max-width: 90%;             /* Prevent overly wide text on big screens */
+  margin: 0 auto;             /* Center block horizontally */
+  color: var(--clr-slate-900); /* Optional: use your dark text color */
+  font-size: 1rem;            /* Ensure readable text */
+  line-height: 1.5;           /* Improve readability */
+}
+
+.attribution{
+ display: block;
+  position: relative;
+  padding-top: 0.5rem;
+  font-size: 0.875rem;
+  color: hsl(216, 15%, 48%); /* Your Slate 500 color */
+  word-wrap: break-word; /* Ensures text wraps inside the container */ 
+}
+/* ----------------------------
+   MEDIA QUERIES
+----------------------------- */
+
+/* Mobile-first (starts at 320px) */
+@media (min-width: 375px) {
+  html {
+    font-size: 93.75%; /* 15px */
+  }
+}
+
+/* Tablet & up */
+@media (min-width: 768px) {
+  .container {
+    padding: 2rem;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1440px) {
+  html {
+    font-size: 100%; /* 16px */
+  }
+
+  .container {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
